@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAIA - Sistema de Auditoría e Informes Alimentarios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="img/logo_saia.jpg" alt="SAIA" id="saia-logo">
+            <h1 data-i18n="app_title">SAIA - Sistema de Auditoría e Informes Alimentarios</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#new-audit" class="active" data-i18n="new_audit"><i class="fas fa-file-alt"></i> Nueva Auditoría</a></li>
+                <li><a href="#audit-history" data-i18n="audit_history"><i class="fas fa-history"></i> Historial de Auditorías</a></li>
+                <li><a href="#clients" data-i18n="clients"><i class="fas fa-users"></i> Gestión de Clientes</a></li>
+                <li><a href="#incidents-db" data-i18n="incidents_db"><i class="fas fa-database"></i> Base de Datos de Incidencias</a></li>
+                <li><a href="#frequent-incidents" data-i18n="frequent_incidents"><i class="fas fa-star"></i> Incidencias Frecuentes</a></li>
+                <li><a href="#settings" data-i18n="settings"><i class="fas fa-cog"></i> Configuración</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <label for="language-selector">Idioma:</label>
+            <select id="language-selector">
+                <option value="es">Español</option>
+                <option value="ca">Català</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Pestaña de Nueva Auditoría -->
+        <div id="new-audit" class="tab-content active">
+            <!-- ... (contenido sin cambios) ... -->
+        </div>
+
+        <!-- Pestaña de Historial de Auditorías -->
+        <div id="audit-history" class="tab-content">
+            <!-- ... (contenido sin cambios) ... -->
+        </div>
+
+        <!-- Pestaña de Gestión de Clientes -->
+        <div id="clients" class="tab-content">
+            <!-- ... (contenido sin cambios) ... -->
+        </div>
+
+        <!-- Pestaña de Base de Datos de Incidencias -->
+        <div id="incidents-db" class="tab-content">
+            <!-- ... (contenido sin cambios) ... -->
+        </div>
+
+        <!-- Pestaña de Incidencias Frecuentes -->
+        <div id="frequent-incidents" class="tab-content">
+            <!-- ... (contenido sin cambios) ... -->
+        </div>
+
+        <!-- Pestaña de Configuración -->
+        <div id="settings" class="tab-content">
+            <!-- ... (contenido sin cambios) ... -->
+        </div>
+    </div>
+
+    <!-- Plantillas -->
+    <template id="incident-template">
+        <!-- ... (contenido sin cambios) ... -->
+    </template>
+
+    <!-- Modales -->
+    <div id="client-modal" class="modal">
+        <!-- ... (contenido sin cambios) ... -->
+    </div>
+    <div id="select-predefined-incident-modal" class="modal">
+        <!-- ... (contenido sin cambios) ... -->
+    </div>
+    <div id="photo-editor-modal" class="modal">
+        <!-- ... (contenido sin cambios) ... -->
+    </div>
+    <div id="photo-zoom-modal" class="modal">
+        <!-- ... (contenido sin cambios) ... -->
+    </div>
+    <div id="report-preview-modal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Vista Previa del Informe</h3>
+                <span class="close" id="close-preview">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="report-preview-container" class="report-preview">
+                    <!-- Aquí se añadirá la vista previa -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="export-word-preview" class="btn btn-primary"><i class="fas fa-file-word"></i> Exportar a Word</button>
+                <button id="export-pdf-preview" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Exportar a PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/db.js"></script>
+    <script src="js/predefined_incidents_data.js"></script>
+    <script src="js/incidents.js"></script>
+    <script src="js/photos.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
